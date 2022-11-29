@@ -1,0 +1,136 @@
+html{
+    box-sizing: border-box;
+    color: white;
+}
+:root{
+    --color_orange: #FC7614;
+    --box-bg-color: hsl(213, 19%, 18%);
+    --grag-bg-color: hsl(213deg 6% 28%);
+}
+
+body{
+    background-color: hsl(216, 12%, 8%);
+    font-family: 'Outfit', sans-serif;
+    font-family: 'Overpass', sans-serif;
+}
+
+/* components */
+.bg-orange{
+    background-color: var(--color_orange);
+}
+
+/* app styling */
+.rating-UI{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.rating-box{
+    width: 16rem;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--box-bg-color);
+    padding: 1.25em;
+    border-radius: 1rem;
+}
+.header > img{
+    border-radius: 50%;
+    padding: 0.8125rem;
+    background-color: hsl(213deg 6% 28%);
+}
+.main-text{
+    font-size: 1.1250rem;
+    font-weight: 700;
+    color: white;
+    padding: .5em 0;
+}
+.sub-text{
+    font-size: .9375rem;
+    font-weight: 400;
+    color: hsl(217, 12%, 63%);
+    margin-bottom: 1.2em;
+}
+.rate{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1em;
+}
+.rate > div{
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: var(--grag-bg-color);
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out;
+}
+.rate > div:hover{
+    background-color: var(--color_orange);
+}
+#error-text{
+    color: rgb(212 14 14);
+    font-size: 0.9rem;
+    margin-top: .25em;
+}
+#submit-rate{
+    background-color: var(--color_orange);
+    border: none;
+    cursor: pointer;
+    height: 2em;
+    border-radius: 28px;
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: .1125rem;
+    text-transform: uppercase;
+    transition: background-color 0.2s ease-in-out;
+}
+#submit-rate:hover{
+    color: var(--color_orange);
+    background-color: white;
+}
+
+/* Thank You state styling */
+.thank-you .header{
+    display: flex;
+    justify-content: center;
+}
+.thank-you .header img{
+    background-color: transparent;
+    border-radius: 0;
+}
+.thank-you .current-rate{
+    width: fit-content;
+    align-self: center;
+    padding: .25rem 1.25em;
+    border-radius: 1.25rem;
+    background-color: var(--grag-bg-color);
+    color: var(--color_orange);
+}
+.thank-you .main-text, .thank-you .sub-text{
+    text-align: center;
+}
+.thank-you .sub-text{
+    margin-top: 0;
+}
+
+/* footer */
+
+a{
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+}
+a::after{
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 100%;
+    background-color: white;
+    bottom: 0;
+    left: 0;
+}
